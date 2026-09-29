@@ -19,11 +19,11 @@ Repo: https://github.com/ashwin-sundaram1/ashwin-fe-bar-submisssion
 - ✅ Commit executed notebooks + evidence → **CHECKPOINT 2**
 
 ## Stage 2 — Unity Catalog governance
-- ⬜ Table/column comments + tags on medallion tables
-- ⬜ Column mask on PII (email, account_ref)
-- ⬜ Grants to demonstrate governed access
-- ⬜ Capture lineage (raw → bronze → silver → gold → recs)
-- ⬜ Commit governance SQL + evidence → **CHECKPOINT 3**
+- ✅ Table/column comments + tags on medallion tables
+- ✅ Column mask on PII (email, account_ref)
+- ✅ Grants to demonstrate governed access
+- ✅ Capture lineage (raw → bronze → silver → gold → recs)
+- ✅ Commit governance SQL + evidence → **CHECKPOINT 3**
 
 ## Stage 3 — Lakebase operational serving
 - ⬜ Create Lakebase (Postgres) instance
