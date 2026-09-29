@@ -32,13 +32,13 @@ Repo: https://github.com/ashwin-sundaram1/ashwin-fe-bar-submisssion
 - ⬜ Commit provisioning + query evidence → **CHECKPOINT 4**
 
 ## Stage 4 — ML propensity + GenAI nudge
-- ⬜ Feature prep from Gold
-- ⬜ Train MLflow propensity model (user × product adoption), log metrics
-- ⬜ Register model to UC model registry
-- ⬜ Batch-score all users → per-product scores → top recommendation
-- ⬜ GenAI: databricks-claude-sonnet-4-5 generates personalized nudge per top rec
-- ⬜ Write `user_recommendations` gold table
-- ⬜ Commit executed notebooks + MLflow metrics + sample output → **CHECKPOINT 5**
+- ✅ Feature prep from Gold
+- ✅ Train MLflow propensity model (user × product adoption), log metrics
+- ✅ Register model to UC model registry
+- ✅ Batch-score all users → per-product scores → top recommendation
+- ✅ GenAI: databricks-claude-sonnet-4-5 generates personalized nudge per top rec
+- ✅ Write `user_recommendations` gold table
+- ✅ Commit executed notebooks + MLflow metrics + sample output → **CHECKPOINT 5**
 
 ## Stage 5 — Genie agent
 - ⬜ Create Genie space over Gold + experiment tables

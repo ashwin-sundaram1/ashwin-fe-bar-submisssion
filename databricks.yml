@@ -25,6 +25,22 @@ resources:
           spec:
             client: "4"
 
+    train_propensity:
+      name: "[meridian] Train Propensity Models + Score"
+      tasks:
+        - task_key: train
+          spark_python_task:
+            python_file: ${workspace.file_path}/ml/train_propensity.py
+            source: WORKSPACE
+          environment_key: ml_env
+      environments:
+        - environment_key: ml_env
+          spec:
+            client: "4"
+            dependencies:
+              - scikit-learn
+              - mlflow
+
   pipelines:
     meridian_medallion:
       name: "[meridian] Medallion Pipeline"
