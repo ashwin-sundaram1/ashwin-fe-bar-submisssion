@@ -41,6 +41,21 @@ resources:
               - scikit-learn
               - mlflow
 
+    sync_to_lakebase:
+      name: "[meridian] Sync Recommendations to Lakebase"
+      tasks:
+        - task_key: sync
+          spark_python_task:
+            python_file: ${workspace.file_path}/lakebase/sync_to_lakebase.py
+            source: WORKSPACE
+          environment_key: lakebase_env
+      environments:
+        - environment_key: lakebase_env
+          spec:
+            client: "4"
+            dependencies:
+              - psycopg2-binary
+
   pipelines:
     meridian_medallion:
       name: "[meridian] Medallion Pipeline"

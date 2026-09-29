@@ -26,10 +26,10 @@ Repo: https://github.com/ashwin-sundaram1/ashwin-fe-bar-submisssion
 - ✅ Commit governance SQL + evidence → **CHECKPOINT 3**
 
 ## Stage 3 — Lakebase operational serving
-- ⬜ Create Lakebase (Postgres) instance
-- ⬜ Sync/write `user_recommendations` to Lakebase
-- ⬜ Verify low-latency lookup by user_id
-- ⬜ Commit provisioning + query evidence → **CHECKPOINT 4**
+- ✅ Create Lakebase (Postgres) instance
+- ✅ Sync/write `user_recommendations` to Lakebase
+- ✅ Verify low-latency lookup by user_id
+- ✅ Commit provisioning + query evidence → **CHECKPOINT 4**
 
 ## Stage 4 — ML propensity + GenAI nudge
 - ✅ Feature prep from Gold
