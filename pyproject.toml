@@ -1,0 +1,12 @@
+[project]
+name = "meridian-trade-febar"
+version = "0.1.0"
+description = "Meridian Trade — FE Bar end-to-end Databricks build"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "databricks-connect>=17.0.0,<=17.0.1",
+    "databricks-sdk>=0.30.0",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=16.0",
+]

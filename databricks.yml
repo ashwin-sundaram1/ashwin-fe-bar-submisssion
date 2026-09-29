@@ -1,0 +1,44 @@
+bundle:
+  name: meridian_trade
+
+workspace:
+  host: https://fevm-ashwin-tvf-testing.cloud.databricks.com
+
+variables:
+  catalog:
+    default: ashwin_tvf_testing_catalog
+  schema:
+    default: meridian_trade
+
+resources:
+  jobs:
+    generate_synthetic_data:
+      name: "[meridian] Generate Synthetic Data"
+      tasks:
+        - task_key: generate
+          spark_python_task:
+            python_file: ${workspace.file_path}/data_generation/generate_synthetic_data.py
+            source: WORKSPACE
+          environment_key: serverless_env
+      environments:
+        - environment_key: serverless_env
+          spec:
+            client: "4"
+
+  pipelines:
+    meridian_medallion:
+      name: "[meridian] Medallion Pipeline"
+      catalog: ${var.catalog}
+      schema: ${var.schema}
+      serverless: true
+      photon: true
+      libraries:
+        - file:
+            path: pipelines/meridian_pipeline.py
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/dev
