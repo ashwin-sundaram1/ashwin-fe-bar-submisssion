@@ -1,0 +1,74 @@
+{
+  "version": 2,
+  "config": {
+    "sample_questions": [
+      {
+        "id": "1eddfb88e335bec19453678c3386e7d5",
+        "question": [
+          "What is the total expected annual value from the top 3 targeting deciles?"
+        ]
+      },
+      {
+        "id": "6c0493d7538cf8850fd0967167c1805e",
+        "question": [
+          "How many users are recommended crypto vs options vs agentic?"
+        ]
+      },
+      {
+        "id": "7bc336a886fbdc5a7f84e60c47502b95",
+        "question": [
+          "What is the crypto adoption lift of treatment over control?"
+        ]
+      },
+      {
+        "id": "873244f1a4247132178aca19c736fe19",
+        "question": [
+          "Which variant had the highest adoption rate for each new product?"
+        ]
+      }
+    ]
+  },
+  "data_sources": {
+    "tables": [
+      {
+        "identifier": "ashwin_tvf_testing_catalog.meridian_trade.gold_experiment_results"
+      },
+      {
+        "identifier": "ashwin_tvf_testing_catalog.meridian_trade.gold_user_features"
+      },
+      {
+        "identifier": "ashwin_tvf_testing_catalog.meridian_trade.user_recommendations"
+      }
+    ]
+  },
+  "instructions": {
+    "text_instructions": [
+      {
+        "id": "b0fee1d30cae885f86136760be002fa4",
+        "content": [
+          "This Genie space covers Meridian Trade's growth experimentation and next-best-feature recommendations for three new products: crypto, options, and the agentic trading assistant. gold_experiment_results has per-experiment, per-variant (control/treatment) adoption rates. gold_user_features has one row per user with pre-launch behavioral features and derived adoption labels. user_recommendations has each user's model-scored recommended_product, propensity_score, expected_annual_value_usd, targeting_decile (1 = highest propensity), and a personalized nudge. Use user_recommendations for targeting questions and gold_experiment_results for experiment lift. Always state grain and filters. 'lift' = treatment adoption_rate_pct minus control adoption_rate_pct."
+        ]
+      }
+    ],
+    "example_question_sqls": [
+      {
+        "id": "26b3ab8704a3a052392382e4dc91d76b",
+        "question": [
+          "How many users are recommended each product?"
+        ],
+        "sql": [
+          "SELECT recommended_product, COUNT(*) AS users, ROUND(AVG(propensity_score),3) AS avg_score\nFROM ashwin_tvf_testing_catalog.meridian_trade.user_recommendations\nGROUP BY recommended_product\nORDER BY users DESC"
+        ]
+      },
+      {
+        "id": "ab0bd29dee9db41a83f0d9c6ea0b617b",
+        "question": [
+          "What is the adoption lift for each product?"
+        ],
+        "sql": [
+          "SELECT product,\n  MAX(CASE WHEN variant='treatment' THEN adoption_rate_pct END)\n  - MAX(CASE WHEN variant='control' THEN adoption_rate_pct END) AS lift_pp\nFROM ashwin_tvf_testing_catalog.meridian_trade.gold_experiment_results\nGROUP BY product\nORDER BY lift_pp DESC"
+        ]
+      }
+    ]
+  }
+}

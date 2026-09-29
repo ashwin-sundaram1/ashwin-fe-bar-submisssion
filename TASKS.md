@@ -41,10 +41,10 @@ Repo: https://github.com/ashwin-sundaram1/ashwin-fe-bar-submisssion
 - ✅ Commit executed notebooks + MLflow metrics + sample output → **CHECKPOINT 5**
 
 ## Stage 5 — Genie agent
-- ⬜ Create Genie space over Gold + experiment tables
-- ⬜ Add sample questions + instructions
-- ⬜ Capture NL question → SQL → answer transcript as text
-- ⬜ Commit genie config + transcript → **CHECKPOINT 6**
+- ✅ Create Genie space over Gold + experiment tables
+- ✅ Add sample questions + instructions
+- ✅ Capture NL question → SQL → answer transcript as text
+- ✅ Commit genie config + transcript → **CHECKPOINT 6**
 
 ## Stage 6 — Databricks App
 - ⬜ Build Streamlit app (KPIs/funnel, per-user rec lookup from Lakebase, Genie embed)
