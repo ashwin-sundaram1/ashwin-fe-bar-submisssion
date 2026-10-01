@@ -37,7 +37,7 @@ The evaluator reads text only; every stage commits its actual output, not screen
 - [`genie/genie_transcript.md`](genie/genie_transcript.md) — Genie NL → SQL → answer transcript
 - [`evidence/stage6_app.md`](evidence/stage6_app.md) — deployed app validation
 
-Business deck: [`deck/meridian_trade_deck.md`](deck/meridian_trade_deck.md).
+Business deck: [`deck/meridian_trade_deck.pdf`](deck/meridian_trade_deck.pdf) (Databricks-branded, 9 slides) · source outline [`deck/meridian_trade_deck.md`](deck/meridian_trade_deck.md).
 
 ## Architecture
 
