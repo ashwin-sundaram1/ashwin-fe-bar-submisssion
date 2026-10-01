@@ -55,5 +55,5 @@ Repo: https://github.com/ashwin-sundaram1/ashwin-fe-bar-submisssion
 ## Stage 7 — Deck + finalize
 - ✅ Presentation deck (business outcome, KPIs, both buyers) → export PDF/md to deck/
 - ✅ Finalize README with architecture + how-to-run + evidence index
-- ⬜ Verify repo is public & readable end-to-end
-- ⬜ Final commit + push → **DONE**
+- ✅ Verify repo is public & readable end-to-end
+- ✅ Final commit + push → **DONE**
