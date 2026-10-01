@@ -47,13 +47,13 @@ Repo: https://github.com/ashwin-sundaram1/ashwin-fe-bar-submisssion
 - ✅ Commit genie config + transcript → **CHECKPOINT 6**
 
 ## Stage 6 — Databricks App
-- ⬜ Build Streamlit app (KPIs/funnel, per-user rec lookup from Lakebase, Genie embed)
-- ⬜ Local devloop test
-- ⬜ Deploy app to workspace, verify running
-- ⬜ Commit app code + run evidence → **CHECKPOINT 7**
+- ✅ Build Streamlit app (KPIs/funnel, per-user rec lookup from Lakebase, Genie embed)
+- ✅ Local devloop test (N/A: PyPI blocked locally; validated on the live deployed app instead)
+- ✅ Deploy app to workspace, verify running
+- ✅ Commit app code + run evidence → **CHECKPOINT 7**
 
 ## Stage 7 — Deck + finalize
-- ⬜ Presentation deck (business outcome, KPIs, both buyers) → export PDF/md to deck/
-- ⬜ Finalize README with architecture + how-to-run + evidence index
+- ✅ Presentation deck (business outcome, KPIs, both buyers) → export PDF/md to deck/
+- ✅ Finalize README with architecture + how-to-run + evidence index
 - ⬜ Verify repo is public & readable end-to-end
 - ⬜ Final commit + push → **DONE**

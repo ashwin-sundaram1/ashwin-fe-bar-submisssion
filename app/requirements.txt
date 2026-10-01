@@ -1,0 +1,6 @@
+streamlit>=1.38
+databricks-sql-connector>=3.4
+databricks-sdk>=0.30
+psycopg2-binary>=2.9
+pandas>=2.2
+plotly>=5.22
